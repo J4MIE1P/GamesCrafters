@@ -1,4 +1,4 @@
-from TTT3D3by3by2 import *
+initialPosition = "XO---------|---------"
 
 def hashTTT(position):
     index = 0
