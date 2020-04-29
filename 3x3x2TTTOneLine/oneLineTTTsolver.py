@@ -14,8 +14,9 @@ def hashTTT(position):
 
 def file_Solve(position):
     index = hashTTT(position)
-    f = open("HashedOneLine.txt", "r")
-    value = f.readline()[index]
+    f = open("HashedOneLine.txt", "rb")
+    f.seek(index, 1)
+    value = f.read(1).decode("utf-8")
     f.close()
     if value == "0":
         value = "lose"
@@ -28,4 +29,4 @@ def file_Solve(position):
     return value
 
 board = initialPosition
-file_Solve(board)
+print(file_Solve(board))
