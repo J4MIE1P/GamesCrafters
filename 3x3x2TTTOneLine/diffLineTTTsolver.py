@@ -1,5 +1,4 @@
-from TTT3D3by3by2 import *
-import time
+initialPosition = "XO---------|---------"
 
 def hashTTT(position):
     index = 0
