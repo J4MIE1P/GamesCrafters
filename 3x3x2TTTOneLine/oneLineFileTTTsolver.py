@@ -1,9 +1,5 @@
 from TTT3D3by3by2 import *
 
-f = open("HashedOneLine.txt", "r")
-s = f.readline()
-f.close()
-
 def hashTTT(position):
     index = 0
     s = position[2:11] + position[12:21]
@@ -18,7 +14,9 @@ def hashTTT(position):
 
 def file_Solve(position):
     index = hashTTT(position)
-    value = s[index]
+    f = open("HashedOneLine.txt", "r")
+    value = f.readline()[index]
+    f.close()
     if value == "0":
         value = "lose"
     elif value == "1":
